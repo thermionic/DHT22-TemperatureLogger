@@ -99,9 +99,9 @@ def emailWarning(msg, msgType):
 	message = 'Subject: %s\n\n%s' % (subj,msg)
 
 	# The actual mail sending
-	server = smtplib.SMTP('smtp.gmail.com',587)
+	server = smtplib.SMTP('put.your.mail.server.here',25)
 	server.starttls()
-	server.login(username,password)
+	# server.login(username,password)
 	server.sendmail(fromaddr, toaddrs, message)
 	server.quit()
 
